@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.2.1/dist/aframe-event-set-component.min.js"></script>
+</head>
+<body>
+    <a-scene>
+            <a-camera >
+                <a-cursor></a-cursor>
+                </a-camera>
+        <a-plane 
+        color="pink" 
+        height="20" 
+        width="20"
+        rotation="-90 0 0"
+        ></a-plane>
+
+        <a-torus
+            id ="reddonut"
+            rotation="-90 0 0" 
+            arc="360" 
+            position="-2 0.3 -3" 
+            radius="0.4" 
+            radius-tubular="0.05"
+            color = "red"
+            width="512"
+            event-set__empat = "_event:mouseenter;position:2 0.3 -3"
+            event-set__enam = "_event:click;position:2 0.47 -3;_target:#greendonut"
+        ></a-torus>
+
+        <a-torus 
+            id ="greendonut"
+            rotation="-90 0 0" 
+            arc="360" 
+            position="-2 0.47 -3" 
+            radius="0.3" 
+            radius-tubular="0.05"
+            color = "green"
+            width="512"
+            event-set__dua = "_event:mouseenter;position:0 0.3 -3"
+            event-set__lima = "_event:click;position:-2 0.3 -3;_target:#bluedonut"
+        ></a-torus>
+
+        <a-torus 
+            id = "bluedonut"
+            rotation="-90 0 0" 
+            arc="360" 
+            position="-2 0.65 -3" 
+            radius="0.2" 
+            radius-tubular="0.05"
+            color = "blue"
+            width="512"
+            event-set__satu = "_event:mouseenter;position:2 0.3 -3"
+            event-set__tiga = "_event:click;position:0 0.46 -3"
+        ></a-torus>
+
+        <a-cylinder 
+        event-set__tujuh = "_event:click;position:2 0.65 -3;_target:#bluedonut"
+        color = "red" position="-2 0 -2" height="0.1" radius="0.1"></a-cylinder>
+
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="-2 0.3 -3" height="3" radius="0.06"></a-cylinder>
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="-2 0 -3" height="0.3" radius="0.6"></a-cylinder>
+
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="0 0.3 -3" height="3" radius="0.06"></a-cylinder>
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="0 0 -3" height="0.3" radius="0.6"></a-cylinder>
+
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="2 0.3 -3" height="3" radius="0.06"></a-cylinder>
+        <a-cylinder src = "textures/Wood/wood1.jpg" position="2 0 -3" height="0.3" radius="0.6"></a-cylinder>
+       
+    </a-scene>
+</body>
+</html>
