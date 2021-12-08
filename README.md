@@ -28,4 +28,5 @@ Tiang kayu paling kanan = Tiang C
 5. Klik blok lingkaran Hijau (maka blok lingkaran Biru akan berpindah dari Tiang B ke Tiang A)
 6. Klik blok lingkaran Merah (maka blok lingkaran Hijau akan berpindah dari Tiang B ke Tiang C)
 7. Terakhir klik tombol merah untuk menyelesaikan Permainan Tower of Hanoi (blok lingkaran Biru akan berpindah dari Tiang A ke Tiang C)
+
 **Permainan Selesai**
